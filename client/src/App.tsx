@@ -1,17 +1,21 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
+import Confession from "./components/Confession";
+import Misdemeanour from "./components/Misdemeanour";
 
-import Home from './components/Home';
-import Misdemeanour from './Misdemeanour';
-//import Confession from './components/confession';
 
-const App: React.FC = () => {
+function App() {
   return (
-    
-    <div>
-      <Home />
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/confession" element={<Confession />} /> // Use the Confession component
+        <Route path="/misdemeanour" element={<Misdemeanour />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
+}
 export default App;
