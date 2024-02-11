@@ -57,7 +57,7 @@ const Confession: React.FC = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage(error?.message || "Something went wrong!");
+      setErrorMessage((error as Error)?.message || "Something went wrong!");
     } finally {
       setLoading(false);
     }
