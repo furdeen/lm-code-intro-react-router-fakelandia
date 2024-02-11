@@ -3,6 +3,7 @@ import Home from "../Home";
 import NotFound from "../NotFound";
 import Confession from "../Confession";
 import Misdemeanour from "../Misdemeanour";
+import MainLayout from "../main_layouts";
 
 
 const Router: React.FC = () => (
